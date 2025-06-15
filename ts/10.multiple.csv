@@ -1,0 +1,27 @@
+function groupStudentCourses(csvLines: any[][]): Record<string, string[]> {
+  const entries: [string, string[]][] = [];
+
+  for (const line of csvLines) {
+    try {
+      // Destructure first value (student name) and the rest (courses)
+      const [rawName, ...courseParts] = line;
+      const name = String(rawName).trim(); // Trim the name
+
+      // Flatten the course parts into a single array
+      const courses = courseParts.flat(Infinity).map(String); // Handle nested arrays
+
+      // Push the student and their course list
+      entries.push([name, courses]);
+    } catch {
+      // Optional catch binding (ignore errors silently)
+    }
+  }
+  const data = [
+  [" Alice ", "Math", ["Science"]],
+  ["Bob", ["History", "Math"], "PE"],
+  ["  Carol ", [["Physics"]]],
+  ["Dan"], // No courses
+  ["Eve", ["CS", ["Math", "AI"]]],
+];
+
+console.log(groupStudentCourses(data));
