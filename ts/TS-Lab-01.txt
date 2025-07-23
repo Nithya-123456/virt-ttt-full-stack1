@@ -1,0 +1,84 @@
+Hands-on Exercises
+
+1. You are creating a user profile system for a web app. A user's name is stored in a variable. You define the profile using an object, and inside a block, you modify a role field. After the block, you want to confirm the original name is still used and the updated role is reflected.
+Write a program to implement this logic and explain how the role update works while the name remains unchanged.
+
+2.Implement a user account system where each user has a private password field. Allow setting and validating password only through methods. Extend this to an admin user that can reset passwords for other users.
+
+3. You have an array of student objects, each with a name, and optionally a grades array (might be missing). Write a program that:
+•	Uses arrow functions to process students.
+•	Calculates the average grade for each student who has grades.
+•	Returns an array of messages like:
+"Student [name] has an average grade of [avg]"
+•	If a student has no grades or grades is missing, safely handle it using optional chaining and return:
+"Student [name] has no grades."
+
+4.You have an array of people objects, each with a name and a birthdate string (format: "YYYY-MM-DD"). Write a program that:
+•	Converts the birthdate string to a Date object.
+•	Checks who has a birthday today (match day and month).
+•	Returns a message:
+"Today is [name]'s birthday!"
+•	If no birthdays today, return "No birthdays today."
+
+5. You have two user profile objects:
+const user1 = { name: "Madam", age: 30, city: "Chennai" };
+const user2 = { age: 31, profession: "Developer", country: "India" };
+Write a program that:
+•	Merges both user objects into one, with properties from user2 overriding those from user1 if conflicts exist.
+•	Uses destructuring to extract name, age, and the rest of the properties separately.
+•	Prints the extracted values clearly.
+
+6. You have a module that exports a Movie class. The class stores movie details (title, director, year). Write a program that:
+•	Imports the Movie class.
+•	Uses a function fetchMovieDetails(id) that returns a Promise resolving after 2 seconds with a movie object.
+•	Uses destructuring and spread/rest operators in the process.
+•	Prints a formatted message about the movie using template literals.
+•	Use let and const appropriately and arrow functions where possible.
+
+7. You are building a system where users have a list of roles. Certain roles grant access to admin panels. You also want to calculate a user’s "power score" as 2 raised to the number of roles they have.
+Write a program that:
+•	Checks if the user has any of the privileged roles (["admin", "moderator", "superuser"]) using a proper array method.
+•	Calculates their power score using exponentiation based on the number of roles.
+•	Prints a message like:
+"Access Granted. Power Score: [score]"
+ or
+"Access Denied. Power Score: [score]"
+
+8. You have an object where keys are usernames and values are their scores. Write an async function that:
+•	Simulates fetching this data after 2 seconds.
+•	Uses Object.entries() to loop through the username-score pairs.
+•	Pads each username to 15 characters (right) and score to 5 digits (left).
+•	Logs the leaderboard in a clean, aligned format.
+
+9. Imagine you are receiving user data from an async generator which yields user objects. Each user has an email field. You need to:
+•	Extract the domain from each email using a regular expression with named groups.
+•	Store all unique domains using a Set.
+•	Use for-await-of to handle the incoming stream.
+•	Use Promise.finally() to print “Stream completed” at the end, even if errors occur.
+
+10. You are given student data from multiple CSV lines. Each line is an array of strings, where:
+•	First value is the student name (sometimes padded with extra spaces).
+•	Remaining values are course names (some arrays are nested).
+•	You must: 
+o	Trim name values.
+o	Flatten all course arrays.
+o	Group them by student using Object.fromEntries().
+o	Handle errors using optional catch binding.
+•	
+11.	How do you reverse a string?
+12.	How do you determine if a string is a palindrome?
+13.	How do you calculate the number of numerical digits in a string?
+14.	How do you find the count for the occurrence of a particular character in a string?
+15.	How do you find the non-matching characters in a string?
+16.	How do you find out if the two given strings are anagrams?
+17.	How do you calculate the number of vowels and consonants in a string?
+18.	How do you total all of the matching integer elements in an array?
+19.	How do you reverse an array?
+20.	How do you find the maximum element in an array?
+21.	How do you sort an array of integers in ascending order?
+22.	How do you calculate the sum of two integers?
+23.	How do you find the average of numbers in a list?
+24.	How do you check if an integer is even or odd?
+25.	How do you find the middle element of a linked list?
+
+
